@@ -5,6 +5,12 @@ public class Money {
 	private final String currency;
 
 	public Money(int amount, String currency) {
+		if (amount < 0) {
+			throw new IllegalArgumentException("illegal negative amoount: [" + amount + "]");
+		}
+		if (currency == null || currency.isEmpty()) {
+			throw new IllegalArgumentException("illegal null or empty currency: [" + currency + "]");
+		}
 		this.amount = amount;
 		this.currency = currency;
 	}
