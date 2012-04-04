@@ -6,12 +6,16 @@ import org.testng.annotations.Test;
 
 public class MoneyTest {
 
-	@Test(dataProviderClass = DataProviders.class, dataProvider = "getMoney")
-	public void constructorShouldSetAmountAndCurrency(int amount, String currency) {
-		Money money = new Money(amount, currency);
+	/**
+	 * This test is invoked with dynamic data provider which will create
+	 * helperObject at runtime to not consume too many memory resources
+	 */
+	@Test(dataProviderClass = DataProviders.class, dataProvider = "getLazyData", skipFailedInvocations = true)
+	public void constructorShouldSetAmountAndCurrency(ComplexObject helperObject) {
+		Money money = new Money(helperObject.getAmount(), helperObject.getCurrency());
 
-		assertEquals(money.getAmount(), amount);
-		assertEquals(money.getCurrency(), currency);
+		assertEquals(money.getAmount(), helperObject.getAmount());
+		assertEquals(money.getCurrency(), helperObject.getCurrency());
 	}
 
 }
