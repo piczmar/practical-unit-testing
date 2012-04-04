@@ -50,7 +50,7 @@ public class RaceResultServiceTest {
 
 	@Test
 	public void shouldSendOnlyOneMessageToMultiSubscriber() {
-		final int wantedNumberOfInvocations = 0;
+		final int wantedNumberOfInvocations = 1;
 
 		service.addSubscriber(client1);
 		service.addSubscriber(client1);

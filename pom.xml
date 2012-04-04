@@ -26,6 +26,17 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.9.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.googlecode.catch-exception</groupId>
+			<artifactId>catch-exception</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.easytesting</groupId>
+			<artifactId>fest-assert</artifactId>
+			<version>1.4</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>

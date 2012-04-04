@@ -13,7 +13,7 @@ public class PasswordValidator {
 	private static Pattern atLeastOneDigitPattern = Pattern.compile("(.*[0-9].*)");
 	private static Pattern atLeast6CharLongPattern = Pattern.compile("(.{6,})");
 	
-	public static void validate(String password) throws InvalidPasswordException {
+	public void validate(String password) throws InvalidPasswordException {
 		Matcher matcher1 = atLeasOneUppercasePattern.matcher(password);
 		if (!matcher1.find()) {
 			throw new InvalidPasswordException("invalid password: [" + password + "]. " + PASSWORD_SHOULD_CONTAIN_UPPERCASE_LETTER);
