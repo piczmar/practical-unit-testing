@@ -30,16 +30,25 @@
 			<groupId>com.googlecode.catch-exception</groupId>
 			<artifactId>catch-exception</artifactId>
 			<version>1.0.4</version>
+			 <scope>test</scope> 
 		</dependency>
 		<dependency>
 			<groupId>org.easytesting</groupId>
 			<artifactId>fest-assert</artifactId>
 			<version>1.4</version>
+			 <scope>test</scope> 
 		</dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest-all</artifactId>
 			<version>1.1</version>
+			 <scope>test</scope> 
+		</dependency>
+		<dependency> 
+		    <groupId>org.unitils</groupId> 
+		    <artifactId>unitils-core</artifactId> 
+		    <version>3.3</version> 
+		    <scope>test</scope> 
 		</dependency>
 
 		<dependency>
