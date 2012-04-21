@@ -2,6 +2,7 @@ package practicalunittesting.ch6;
 
 import static org.fest.assertions.Assertions.*;
 import static practicalunittesting.ch6.BookAssert.*;
+<<<<<<< HEAD
 
 import static org.mockito.Mockito.*;
 import org.testng.annotations.Test;
@@ -16,5 +17,4 @@ public class BookFestTest {
 		assertThat(book).hasTitle(ANY_BOOK_TITLE);
 
 	}
-	
 }
